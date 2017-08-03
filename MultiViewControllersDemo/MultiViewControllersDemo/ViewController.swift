@@ -14,7 +14,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func enter(_ sender: Any) {
-        
+        if(txtInput.text != ""){
+            performSegue(withIdentifier: "segue", sender: self)
+        }
+    }
+    
+    /**Code is performed before segue is performed*/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondController = segue.destination as! SecondViewController
+        secondController.myString = txtInput.text!
     }
     
     override func viewDidLoad() {

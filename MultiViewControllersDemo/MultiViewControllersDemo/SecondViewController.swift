@@ -12,8 +12,12 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    var myString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        label.text = myString
 
         // Do any additional setup after loading the view.
     }
