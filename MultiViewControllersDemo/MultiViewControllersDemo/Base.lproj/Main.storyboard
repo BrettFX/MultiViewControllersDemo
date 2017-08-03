@@ -65,6 +65,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
+                                    <action selector="back:" destination="CSB-bZ-Z0H" eventType="touchUpInside" id="qjE-pi-mnz"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="1Zz-uY-7uR"/>
                                 </connections>
                             </button>
