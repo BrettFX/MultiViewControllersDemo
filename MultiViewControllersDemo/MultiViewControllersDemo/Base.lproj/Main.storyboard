@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,16 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-dY-g35">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-dY-g35">
                                 <rect key="frame" x="97" y="152" width="180" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkZ-Lb-mpv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkZ-Lb-mpv">
                                 <rect key="frame" x="169" y="246" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
                                     <action selector="enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfY-Hs-BaD"/>
@@ -38,6 +37,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ojw-dY-g35" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="132" id="1eP-Su-RiT"/>
+                            <constraint firstItem="Ojw-dY-g35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="81" id="AVv-p1-r6K"/>
+                            <constraint firstItem="Ojw-dY-g35" firstAttribute="centerX" secondItem="SkZ-Lb-mpv" secondAttribute="centerX" id="WQd-SJ-42q"/>
+                            <constraint firstItem="Ojw-dY-g35" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghk-pm-6CW"/>
+                            <constraint firstItem="SkZ-Lb-mpv" firstAttribute="top" secondItem="Ojw-dY-g35" secondAttribute="bottom" constant="64" id="uY9-mO-zC5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="txtInput" destination="Ojw-dY-g35" id="HHW-rn-BDW"/>
@@ -60,24 +66,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mu-c8-DF6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mu-c8-DF6">
                                 <rect key="frame" x="22" y="629" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="back:" destination="CSB-bZ-Z0H" eventType="touchUpInside" id="qjE-pi-mnz"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="1Zz-uY-7uR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-9b-V9f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-9b-V9f">
                                 <rect key="frame" x="22" y="188" width="337" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="gTM-rx-2Xe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DQo-xg-qN5" firstAttribute="top" secondItem="8mu-c8-DF6" secondAttribute="bottom" constant="8" symbolic="YES" id="1jN-oh-Heq"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="6" id="Atv-An-Jdk"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="8mu-c8-DF6" secondAttribute="leading" id="GlE-eh-G89"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="top" secondItem="Qpu-kT-58U" secondAttribute="bottom" constant="168" id="kf0-Ve-UOd"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="trailing" secondItem="3vZ-qz-hOm" secondAttribute="trailingMargin" id="wEa-iQ-Voa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="UIV-9b-V9f" id="Vfc-xM-C9o"/>
