@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-dY-g35">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-dY-g35">
                                 <rect key="frame" x="97" y="152" width="180" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,8 +74,15 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="1Zz-uY-7uR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-Pb-xLI">
+                                <rect key="frame" x="92" y="267" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-9b-V9f">
-                                <rect key="frame" x="22" y="188" width="337" height="29"/>
+                                <rect key="frame" x="19" y="188" width="337" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="gTM-rx-2Xe"/>
                                 </constraints>
@@ -87,10 +94,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DQo-xg-qN5" firstAttribute="top" secondItem="8mu-c8-DF6" secondAttribute="bottom" constant="8" symbolic="YES" id="1jN-oh-Heq"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="6" id="Atv-An-Jdk"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="8mu-c8-DF6" secondAttribute="leading" id="GlE-eh-G89"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="3" id="Atv-An-Jdk"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="8mu-c8-DF6" secondAttribute="leading" constant="-3" id="GlE-eh-G89"/>
                             <constraint firstItem="UIV-9b-V9f" firstAttribute="top" secondItem="Qpu-kT-58U" secondAttribute="bottom" constant="168" id="kf0-Ve-UOd"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="trailing" secondItem="3vZ-qz-hOm" secondAttribute="trailingMargin" id="wEa-iQ-Voa"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="trailing" secondItem="3vZ-qz-hOm" secondAttribute="trailingMargin" constant="-3" id="wEa-iQ-Voa"/>
                         </constraints>
                     </view>
                     <connections>
