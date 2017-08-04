@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtInput: UITextField!
-    @IBOutlet weak var lblLastName: UILabel!    
+    @IBOutlet weak var lblLastName: UILabel!
+    
+    var lastName = String()
     
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
@@ -27,7 +29,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

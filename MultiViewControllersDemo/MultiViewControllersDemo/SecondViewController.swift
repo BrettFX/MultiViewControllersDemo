@@ -17,13 +17,15 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         label.text = myString
     }
     
     
     @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if(txtLastName.text != ""){
+            performSegue(withIdentifier: "passBackSegue", sender: self)
+            dismiss(animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +37,8 @@ class SecondViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let firstController = segue.destination as! ViewController
+        firstController.lastName = txtLastName.text!
     }
     
 
