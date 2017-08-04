@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var txtLastName: UITextField!
@@ -17,7 +17,13 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = myString
+        label.text! = "\(myString)... Please enter your last name."
+        self.txtLastName.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        self.view.endEditing(true)
+        return false
     }
     
     

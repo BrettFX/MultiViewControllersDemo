@@ -87,17 +87,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="passBackSegue" id="1Zz-uY-7uR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-Pb-xLI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-Pb-xLI">
                                 <rect key="frame" x="92" y="267" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-9b-V9f">
                                 <rect key="frame" x="19" y="188" width="337" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="gTM-rx-2Xe"/>
+                                    <constraint firstAttribute="height" constant="29" id="XZU-fJ-Bq4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -106,11 +105,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DQo-xg-qN5" firstAttribute="top" secondItem="8mu-c8-DF6" secondAttribute="bottom" constant="8" symbolic="YES" id="1jN-oh-Heq"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="3" id="Atv-An-Jdk"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="8mu-c8-DF6" secondAttribute="leading" constant="-3" id="GlE-eh-G89"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="top" secondItem="Qpu-kT-58U" secondAttribute="bottom" constant="168" id="kf0-Ve-UOd"/>
-                            <constraint firstItem="UIV-9b-V9f" firstAttribute="trailing" secondItem="3vZ-qz-hOm" secondAttribute="trailingMargin" constant="-3" id="wEa-iQ-Voa"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="top" secondItem="Qpu-kT-58U" secondAttribute="bottom" constant="168" id="1Re-a6-Xet"/>
+                            <constraint firstItem="DQo-xg-qN5" firstAttribute="top" secondItem="8mu-c8-DF6" secondAttribute="bottom" constant="8" symbolic="YES" id="CiO-kW-3hF"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="centerX" secondItem="mSC-Pb-xLI" secondAttribute="centerX" id="Kaz-gI-Krb"/>
+                            <constraint firstItem="mSC-Pb-xLI" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="76" id="OTI-oa-cZ5"/>
+                            <constraint firstItem="mSC-Pb-xLI" firstAttribute="top" secondItem="UIV-9b-V9f" secondAttribute="bottom" constant="50" id="PeU-ml-MOk"/>
+                            <constraint firstItem="8mu-c8-DF6" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="6" id="UiQ-pp-b8o"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="leading" secondItem="3vZ-qz-hOm" secondAttribute="leadingMargin" constant="3" id="dx5-Ph-ArY"/>
+                            <constraint firstItem="UIV-9b-V9f" firstAttribute="centerX" secondItem="3vZ-qz-hOm" secondAttribute="centerX" id="xtD-9x-Gew"/>
                         </constraints>
                     </view>
                     <connections>
