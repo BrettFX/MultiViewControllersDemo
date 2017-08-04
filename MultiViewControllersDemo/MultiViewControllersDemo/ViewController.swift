@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtInput: UITextField!
-    
+    @IBOutlet weak var lblLastName: UILabel!    
     
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
