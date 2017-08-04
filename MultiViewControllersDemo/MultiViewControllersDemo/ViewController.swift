@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtInput: UITextField!
     @IBOutlet weak var lblLastName: UILabel!
     
-    var lastName = String()
+    var firstName: String = ""
+    var lastName: String = ""
     
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
@@ -29,6 +30,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(firstName != "" && lastName != ""){
+            lblLastName.text! = "Welcome \(firstName) \(lastName)!"
+        }else{
+            lblLastName.text! = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {
