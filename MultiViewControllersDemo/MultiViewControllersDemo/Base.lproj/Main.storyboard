@@ -60,7 +60,6 @@
                     <connections>
                         <outlet property="lblLastName" destination="Ohl-Vy-gJK" id="xXQ-mf-I7z"/>
                         <outlet property="txtInput" destination="Ojw-dY-g35" id="HHW-rn-BDW"/>
-                        <segue destination="CSB-bZ-Z0H" kind="show" identifier="segue" id="jK6-A6-lCy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,7 +83,6 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="back:" destination="CSB-bZ-Z0H" eventType="touchUpInside" id="qjE-pi-mnz"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="passBackSegue" id="1Zz-uY-7uR"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-Pb-xLI">

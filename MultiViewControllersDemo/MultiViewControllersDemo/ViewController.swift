@@ -13,7 +13,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtInput: UITextField!
-    @IBOutlet weak var lblLastName: UILabel!
+    @IBOutlet weak var lblWelcome: UILabel!
     
     var firstName: String = ""
     var lastName: String = ""
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if(firstName != "" && lastName != ""){
-            lblLastName.text! = "Welcome \(firstName) \(lastName)!"
+            lblWelcome.text! = "Welcome \(firstName) \(lastName)!"
         }else{
-            lblLastName.text! = ""
+            lblWelcome.text! = ""
         }
     }
 
