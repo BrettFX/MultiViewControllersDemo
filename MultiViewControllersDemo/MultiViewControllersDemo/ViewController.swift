@@ -10,7 +10,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MyProtocol{
 
     @IBOutlet weak var txtInput: UITextField!
     @IBOutlet weak var lblWelcome: UILabel!
@@ -18,11 +18,17 @@ class ViewController: UIViewController {
     var firstName: String = ""
     var lastName: String = ""
     
-    
-    
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
             performSegue(withIdentifier: "segue", sender: self)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (let valueToDisplay = lastName: String){
+            print("Value from display = \(valueToDisplay)")
         }
     }
     

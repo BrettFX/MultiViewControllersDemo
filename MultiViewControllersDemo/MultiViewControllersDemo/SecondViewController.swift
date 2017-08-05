@@ -41,7 +41,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func back(_ sender: Any) {
         if(txtLastName.text != ""){
-            performSegue(withIdentifier: "passBackSegue", sender: self)
             dismiss(animated: true, completion: nil)
         }
     }
@@ -50,15 +49,5 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let firstController = segue.destination as! ViewController
-        firstController.firstName = label.text!
-        firstController.lastName = txtLastName.text!
-    }
-    
 
 }
