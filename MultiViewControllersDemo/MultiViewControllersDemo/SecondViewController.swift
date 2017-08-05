@@ -8,12 +8,24 @@
 
 import UIKit
 
+protocol MyProtocol {
+    func setResultOfBusinessLogic(valueSent: String)
+}
+
 class SecondViewController: UIViewController, UITextFieldDelegate {
+    
+    var delegate: MyProtocol?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var txtLastName: UITextField!
     
     var myString = String()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let lastName: String = txtLastName.text!
+        delegate?.setResultOfBusinessLogic(valueSent: lastName)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

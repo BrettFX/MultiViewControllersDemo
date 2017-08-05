@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var firstName: String = ""
     var lastName: String = ""
     
+    
+    
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
             performSegue(withIdentifier: "segue", sender: self)
