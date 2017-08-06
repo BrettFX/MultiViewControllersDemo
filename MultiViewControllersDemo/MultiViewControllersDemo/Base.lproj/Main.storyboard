@@ -69,7 +69,7 @@
         <!--Second View Controller-->
         <scene sceneID="LsL-Oy-oM2">
             <objects>
-                <viewController id="CSB-bZ-Z0H" customClass="SecondViewController" customModule="MultiViewControllersDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="CSB-bZ-Z0H" customClass="SecondViewController" customModule="MultiViewControllersDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qpu-kT-58U"/>
                         <viewControllerLayoutGuide type="bottom" id="DQo-xg-qN5"/>

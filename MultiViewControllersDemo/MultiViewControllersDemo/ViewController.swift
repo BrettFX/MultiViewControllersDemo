@@ -20,7 +20,11 @@ class ViewController: UIViewController, MyProtocol{
     
     @IBAction func enter(_ sender: Any) {
         if(txtInput.text != ""){
-            performSegue(withIdentifier: "segue", sender: self)
+            let secondController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+            
+            secondController.delegate = self
+            
+            self.navigationController?.pushViewController(secondController, animated: true)
         }
     }
     
@@ -28,24 +32,13 @@ class ViewController: UIViewController, MyProtocol{
         super.viewWillAppear(animated)
         
         if(lastName != ""){
-           print("Value from display = \(lastName)")
+            print("Value from display = \(lastName)")
+            lblWelcome.text! = "Welcome \(firstName) \(lastName)!"
         }
-    }
-    
-    /**Code is performed before segue is performed*/
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let secondController = segue.destination as! SecondViewController
-        secondController.myString = txtInput.text!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(firstName != "" && lastName != ""){
-            lblWelcome.text! = "Welcome \(firstName) \(lastName)!"
-        }else{
-            lblWelcome.text! = ""
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +47,7 @@ class ViewController: UIViewController, MyProtocol{
     }
 
     func setResultOfBusinessLogic(valueSent: String){
-        
+        lastName = valueSent
     }
 }
 
