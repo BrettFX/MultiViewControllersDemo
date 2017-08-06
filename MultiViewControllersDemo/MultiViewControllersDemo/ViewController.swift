@@ -27,8 +27,8 @@ class ViewController: UIViewController, MyProtocol{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if (let valueToDisplay = lastName: String){
-            print("Value from display = \(valueToDisplay)")
+        if(lastName != ""){
+           print("Value from display = \(lastName)")
         }
     }
     
@@ -53,6 +53,8 @@ class ViewController: UIViewController, MyProtocol{
         // Dispose of any resources that can be recreated.
     }
 
-
+    func setResultOfBusinessLogic(valueSent: String){
+        
+    }
 }
 
