@@ -57,8 +57,7 @@
                             <constraint firstItem="SkZ-Lb-mpv" firstAttribute="top" secondItem="Ojw-dY-g35" secondAttribute="bottom" constant="64" id="ydn-hq-Rs0"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lblLastName" destination="Ohl-Vy-gJK" id="xXQ-mf-I7z"/>
+                    <connections>                        
                         <outlet property="lblWelcome" destination="Ohl-Vy-gJK" id="7iz-5L-Ln6"/>
                         <outlet property="txtInput" destination="Ojw-dY-g35" id="HHW-rn-BDW"/>
                     </connections>
