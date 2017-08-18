@@ -23,7 +23,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func myButtonTapped(_ sender: Any) {
+        if(myTextField.text?.isEmpty)!{
+            return
+        }
         
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        
+        secondViewController.myStringValue = myTextField.text
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 }
 

@@ -9,11 +9,19 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var myStringValue: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("The value of myStringValue is: \(myStringValue!)")
     }
 
     override func didReceiveMemoryWarning() {
