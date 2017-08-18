@@ -17,12 +17,19 @@ class SecondViewController: UIViewController {
     var delegate: MyProtocol?
     
     var myStringValue: String?
+    
+    @IBOutlet weak var myLabel: UILabel!
+    
+    @IBOutlet weak var myTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Perform business logic.
         let dataPassedFromFirstViewController: String = myStringValue!
+        
+        //Provides default value of ""
+        myLabel.text = "\(myStringValue ?? "")... Please enter your last name."
         
         delegate?.setResultOfBusinessLogic(valueSent: dataPassedFromFirstViewController)
     }
@@ -37,6 +44,11 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        
+    }
+    
     
 
     /*

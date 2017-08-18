@@ -84,6 +84,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-Je-CIc">
                                 <rect key="frame" x="168" y="279" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="goBack:" destination="ugj-BL-9yB" eventType="touchUpInside" id="c48-np-PqC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,6 +100,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="oHd-t9-Wek" secondAttribute="trailing" constant="51" id="xiD-gj-48g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="y8A-C9-V9t" id="hki-sQ-nH0"/>
+                        <outlet property="myTextField" destination="oHd-t9-Wek" id="n7u-H1-n01"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CH7-a4-REq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
