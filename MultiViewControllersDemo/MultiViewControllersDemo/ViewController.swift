@@ -5,6 +5,9 @@
 //  Created by Brett Allen on 8/18/17.
 //  Copyright © 2017 Brett Allen. All rights reserved.
 //
+//  Passing Data Forward: http://swiftdeveloperblog.com/pass-information-forward-from-one-viewcontroller-to-another-in-swift/
+//  Passign Data Back: http://swiftdeveloperblog.com/pass-information-back-to-the-previous-view-controller/
+//
 
 import UIKit
 
