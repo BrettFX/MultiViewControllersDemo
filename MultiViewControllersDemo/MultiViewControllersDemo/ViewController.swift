@@ -8,23 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController, MyProtocol {
+class ViewController: UIViewController, MyProtocol, UITextFieldDelegate {
     
     @IBOutlet weak var myTextField: UITextField!
     
-    var valueSentFromSecondViewController: String?
+    var valueSentFromSecondViewController: String? = ""
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()        
+        self.myTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let valueToDisplay: String = (valueSentFromSecondViewController?.isEmpty)! ? "None" : valueSentFromSecondViewController!
+        let valueToDisplay: String = valueSentFromSecondViewController! == "" ? "None" : valueSentFromSecondViewController!
         
         print("Value from display = \(valueToDisplay)")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        self.view.endEditing(true)
+        return false
     }
 
     override func didReceiveMemoryWarning() {
