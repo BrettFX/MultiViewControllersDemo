@@ -12,6 +12,8 @@ class ViewController: UIViewController, MyProtocol, UITextFieldDelegate {
     
     @IBOutlet weak var myTextField: UITextField!
     
+    @IBOutlet weak var myLabel: UILabel!
+    
     var valueSentFromSecondViewController: String? = ""
     
     override func viewDidLoad() {
@@ -25,6 +27,10 @@ class ViewController: UIViewController, MyProtocol, UITextFieldDelegate {
         let valueToDisplay: String = valueSentFromSecondViewController! == "" ? "None" : valueSentFromSecondViewController!
         
         print("Value from display = \(valueToDisplay)")
+        
+        if(valueSentFromSecondViewController != ""){
+            myLabel.text! = "Welcome \(valueSentFromSecondViewController ?? ""), you are quite the programming genious!"
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{

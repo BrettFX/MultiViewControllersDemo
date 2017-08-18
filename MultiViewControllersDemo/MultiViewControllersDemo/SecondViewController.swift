@@ -24,14 +24,9 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Perform business logic.
-        let dataPassedFromFirstViewController: String = myStringValue!
         
         //Provides default value of ""
         myLabel.text = "\(myStringValue ?? "")... Please enter your last name."
-        
-        delegate?.setResultOfBusinessLogic(valueSent: dataPassedFromFirstViewController)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +41,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func goBack(_ sender: Any) {
+        if(myTextField.text?.isEmpty)!{
+            return
+        }
         
+        let fullName: String = "\(myStringValue ?? "") \(myTextField.text ?? "")"
+        
+        delegate?.setResultOfBusinessLogic(valueSent: fullName)
+        dismiss(animated: true, completion: nil)
     }
     
     
