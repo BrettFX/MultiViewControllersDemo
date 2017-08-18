@@ -8,14 +8,23 @@
 
 import UIKit
 
+protocol MyProtocol{
+    func setResultOfBusinessLogic(valueSent: String)
+}
+
 class SecondViewController: UIViewController {
+    
+    var delegate: MyProtocol?
     
     var myStringValue: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Perform business logic.
+        let dataPassedFromFirstViewController: String = myStringValue!
+        
+        delegate?.setResultOfBusinessLogic(valueSent: dataPassedFromFirstViewController)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MyProtocol {
     
     @IBOutlet weak var myTextField: UITextField!
+    
+    var valueSentFromSecondViewController: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let valueToDisplay: String = (valueSentFromSecondViewController?.isEmpty)! ? "None" : valueSentFromSecondViewController!
+        
+        print("Value from display = \(valueToDisplay)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +41,14 @@ class ViewController: UIViewController {
         
         secondViewController.myStringValue = myTextField.text
         
+        //IMPORTANT: for being able to pass data back
+        secondViewController.delegate = self
+        
         self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
+    func setResultOfBusinessLogic(valueSent: String){
+        self.valueSentFromSecondViewController = valueSent
     }
 }
 
