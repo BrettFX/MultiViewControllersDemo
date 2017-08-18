@@ -19,7 +19,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var txtLastName: UITextField!
     
-    var myString = String()
+    var myString: String?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
