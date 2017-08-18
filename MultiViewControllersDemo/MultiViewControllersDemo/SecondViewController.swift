@@ -12,7 +12,7 @@ protocol MyProtocol{
     func setResultOfBusinessLogic(valueSent: String)
 }
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
     
     var delegate: MyProtocol?
     
@@ -27,6 +27,13 @@ class SecondViewController: UIViewController {
         
         //Provides default value of ""
         myLabel.text = "\(myStringValue ?? "")... Please enter your last name."
+        
+        self.myTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewWillAppear(_ animated: Bool) {
