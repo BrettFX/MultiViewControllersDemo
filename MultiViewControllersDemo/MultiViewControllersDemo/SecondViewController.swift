@@ -47,8 +47,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func goBack(_ sender: Any) {
+    @IBAction func back(_ sender: UIButton) {
         if(myTextField.text?.isEmpty)!{
+            print("Text field cannot be left empty!")
             return
         }
         
@@ -57,8 +58,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         delegate?.setResultOfBusinessLogic(valueSent: fullName)
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     /*
      // MARK: - Navigation

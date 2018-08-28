@@ -101,11 +101,11 @@
 			children = (
 				B41F495E1F474A5E00563D25 /* AppDelegate.swift */,
 				B41F49601F474A5E00563D25 /* ViewController.swift */,
+				B41F498C1F474E2800563D25 /* SecondViewController.swift */,
 				B41F49621F474A5E00563D25 /* Main.storyboard */,
 				B41F49651F474A5E00563D25 /* Assets.xcassets */,
 				B41F49671F474A5E00563D25 /* LaunchScreen.storyboard */,
 				B41F496A1F474A5E00563D25 /* Info.plist */,
-				B41F498C1F474E2800563D25 /* SecondViewController.swift */,
 			);
 			path = MultiViewControllersDemo;
 			sourceTree = "<group>";

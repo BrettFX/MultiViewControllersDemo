@@ -58,7 +58,9 @@ class ViewController: UIViewController, MyProtocol, UITextFieldDelegate {
         //IMPORTANT: for being able to pass data back
         secondViewController.delegate = self
         
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        print("Going to next view controller")
+//        self.navigationController?.pushViewController(secondViewController, animated: true)
+        self.present(secondViewController, animated: true, completion: nil)
     }
     
     func setResultOfBusinessLogic(valueSent: String){
